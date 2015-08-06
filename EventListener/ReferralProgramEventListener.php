@@ -27,7 +27,7 @@ use Deliberry\ReferralProgramBundle\ElcodiReferralProgramCookie;
 use Deliberry\ReferralProgramBundle\ElcodiReferralProgramRuleTypes;
 use Deliberry\ReferralProgramBundle\Services\ReferralCouponManager;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
-use Elcodi\Component\User\Event\CustomerRegisterEvent;
+use Elcodi\Component\User\Event\UserRegisterEvent;
 
 /**
  * Class ReferralProgramEventListener
@@ -81,9 +81,9 @@ class ReferralProgramEventListener
      * If is it, respective coupons will be assigned if relative
      * ReferralRule is designed as it
      *
-     * @param CustomerRegisterEvent $event Event containing referral data
+     * @param UserRegisterEvent $event Event containing referral data
      */
-    public function onCustomerRegister(CustomerRegisterEvent $event)
+    public function onCustomerRegister(UserRegisterEvent $event)
     {
         $hash = $this->getReferralProgramCookieHash();
 
