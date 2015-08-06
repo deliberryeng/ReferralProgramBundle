@@ -27,7 +27,7 @@ use Deliberry\ReferralProgramBundle\DependencyInjection\ElcodiReferralProgramExt
 /**
  * ReferralProgram Bundle
  */
-class ElcodiReferralProgramBundle extends Bundle
+class DeliberryReferralProgramBundle extends Bundle
 {
     /**
      * @param ContainerBuilder $container
