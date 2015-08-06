@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Entity;
+namespace Deliberry\Bundle\ReferralProgram\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 

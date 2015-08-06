@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Controller;
+namespace Deliberry\Bundle\ReferralProgram\Controller;
 
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-use Elcodi\Component\ReferralProgram\ElcodiReferralProgramCookie;
+use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramCookie;
 
 /**
  * Class ReferralProgramRoutesLoader

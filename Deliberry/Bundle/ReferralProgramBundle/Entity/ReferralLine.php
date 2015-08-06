@@ -15,16 +15,16 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Entity;
+namespace Deliberry\Bundle\ReferralProgram\Entity;
 
 use Elcodi\Component\Core\Entity\Traits\DateTimeTrait;
 use Elcodi\Component\Core\Entity\Traits\EnabledTrait;
 use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Elcodi\Component\ReferralProgram\Entity\Traits\CouponAssignmentTrait;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\Traits\CouponAssignmentTrait;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

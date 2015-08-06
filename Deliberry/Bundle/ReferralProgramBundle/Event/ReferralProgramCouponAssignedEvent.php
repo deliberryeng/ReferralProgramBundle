@@ -15,12 +15,12 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Event;
+namespace Deliberry\Bundle\ReferralProgram\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
 
 /**
  * Class ReferralProgramCouponAssignedEvent

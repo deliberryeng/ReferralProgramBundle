@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram;
+namespace Deliberry\Bundle\ReferralProgram;
 
 /**
  * Class ElcodiReferralProgramRuleTypes

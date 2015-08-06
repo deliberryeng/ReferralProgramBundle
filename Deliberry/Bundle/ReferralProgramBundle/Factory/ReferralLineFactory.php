@@ -15,13 +15,13 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Factory;
+namespace Deliberry\Bundle\ReferralProgram\Factory;
 
 use DateTime;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
-use Elcodi\Component\ReferralProgram\Entity\ReferralLine;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralLine;
 
 /**
  * Class ReferralLineFactory

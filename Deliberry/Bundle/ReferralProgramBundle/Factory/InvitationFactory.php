@@ -15,10 +15,10 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Factory;
+namespace Deliberry\Bundle\ReferralProgram\Factory;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Elcodi\Component\ReferralProgram\Entity\Invitation;
+use Deliberry\Bundle\ReferralProgram\Entity\Invitation;
 
 /**
  * Class InvitationFactory

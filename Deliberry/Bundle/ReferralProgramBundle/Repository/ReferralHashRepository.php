@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Repository;
+namespace Deliberry\Bundle\ReferralProgram\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

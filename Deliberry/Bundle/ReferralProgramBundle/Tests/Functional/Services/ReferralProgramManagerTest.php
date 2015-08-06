@@ -15,19 +15,19 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Bundle\ReferralProgramBundle\Tests\Functional\Services;
+namespace Deliberry\Bundle\ReferralProgramBundle\Tests\Functional\Services;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Persistence\ObjectManager;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
-use Elcodi\Component\ReferralProgram\ElcodiReferralProgramRuleTypes;
-use Elcodi\Component\ReferralProgram\ElcodiReferralProgramSources;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Elcodi\Component\ReferralProgram\Entity\Invitation;
-use Elcodi\Component\ReferralProgram\Entity\ReferralHash;
-use Elcodi\Component\ReferralProgram\Entity\ReferralLine;
-use Elcodi\Component\ReferralProgram\Entity\ReferralRule;
+use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramRuleTypes;
+use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramSources;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\Invitation;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralLine;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralRule;
 
 /**
  * Class ReferralProgramManagerTest
@@ -142,7 +142,7 @@ class ReferralProgramManagerTest extends WebTestCase
 
         $this->assertCount(5, $referralLines);
         foreach ($referralLines as $referralLine) {
-            $this->assertInstanceOf('Elcodi\Component\ReferralProgram\Entity\ReferralLine', $referralLine);
+            $this->assertInstanceOf('Deliberry\Bundle\ReferralProgram\Entity\ReferralLine', $referralLine);
             $this->assertNull($referralLine->getInvited());
             $this->assertEquals($referralLine->getSource(), ElcodiReferralProgramSources::EMAIL);
             $this->assertEquals($referralLine->getReferralRule()->getId(), $referralRule->getId());
@@ -165,7 +165,7 @@ class ReferralProgramManagerTest extends WebTestCase
      * History: An email is invited using referralprogram engine.
      * No ReferralRule is enabled
      *
-     * @expectedException \Elcodi\Component\ReferralProgram\Exceptions\ReferralProgramRuleNotFoundException
+     * @expectedException \Deliberry\Bundle\ReferralProgram\Exceptions\ReferralProgramRuleNotFoundException
      */
     public function testInviteNoReferralHashEnabled()
     {

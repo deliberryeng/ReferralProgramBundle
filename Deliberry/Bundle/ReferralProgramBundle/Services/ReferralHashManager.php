@@ -15,15 +15,15 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Services;
+namespace Deliberry\Bundle\ReferralProgram\Services;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
 use Elcodi\Component\Core\Generator\Interfaces\GeneratorInterface;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
-use Elcodi\Component\ReferralProgram\Entity\ReferralHash;
-use Elcodi\Component\ReferralProgram\Factory\ReferralHashFactory;
-use Elcodi\Component\ReferralProgram\Repository\ReferralHashRepository;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
+use Deliberry\Bundle\ReferralProgram\Factory\ReferralHashFactory;
+use Deliberry\Bundle\ReferralProgram\Repository\ReferralHashRepository;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

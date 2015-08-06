@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Entity\Interfaces;
+namespace Deliberry\Bundle\ReferralProgram\Entity\Interfaces;
 
 use Doctrine\Common\Collections\Collection;
 

@@ -15,10 +15,10 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Bundle\ReferralProgramBundle\Tests\Functional\Services;
+namespace Deliberry\Bundle\ReferralProgramBundle\Tests\Functional\Services;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
-use Elcodi\Component\ReferralProgram\Services\ReferralHashManager;
+use Deliberry\Bundle\ReferralProgram\Services\ReferralHashManager;
 use Elcodi\Component\User\Entity\Customer;
 
 /**
@@ -80,7 +80,7 @@ class ReferralHashManagerTest extends WebTestCase
         $referralHashManager = $this->get('elcodi.manager.referral_hash');
         $referralHash = $referralHashManager->getReferralHashByCustomer($customer);
 
-        $this->assertInstanceOf('Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface', $referralHash);
+        $this->assertInstanceOf('Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface', $referralHash);
         $this->assertCount(1, $this->findAll('referral_hash'));
     }
 
@@ -100,7 +100,7 @@ class ReferralHashManagerTest extends WebTestCase
         $referralHashManager = $this->get('elcodi.manager.referral_hash');
         $referralHash = $referralHashManager->getReferralHashByCustomer($customer);
 
-        $this->assertInstanceOf('Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface', $referralHash);
+        $this->assertInstanceOf('Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface', $referralHash);
         $this->assertCount(2, $this->findAll('referral_hash'));
     }
 }

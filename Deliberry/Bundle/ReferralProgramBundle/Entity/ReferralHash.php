@@ -15,12 +15,12 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Entity;
+namespace Deliberry\Bundle\ReferralProgram\Entity;
 
 use Doctrine\Common\Collections\Collection;
 
 use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

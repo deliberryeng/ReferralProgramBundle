@@ -15,9 +15,9 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Exceptions;
+namespace Deliberry\Bundle\ReferralProgram\Exceptions;
 
-use Elcodi\Component\ReferralProgram\Exceptions\Abstracts\AbstractReferralProgramException;
+use Deliberry\Bundle\ReferralProgram\Exceptions\Abstracts\AbstractReferralProgramException;
 
 /**
  * Class ReferralProgramRuleNotFoundException

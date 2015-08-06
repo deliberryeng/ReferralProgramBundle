@@ -1,6 +1,6 @@
-Elcodi\Component\ReferralProgram\Entity\ReferralLine:
+Deliberry\Bundle\ReferralProgram\Entity\ReferralLine:
     type: entity
-    repositoryClass: Elcodi\Component\ReferralProgram\Repository\ReferralLineRepository
+    repositoryClass: Deliberry\Bundle\ReferralProgram\Repository\ReferralLineRepository
     table: referral_line
     id:
         id:
@@ -66,14 +66,14 @@ Elcodi\Component\ReferralProgram\Entity\ReferralLine:
                 name: invited_id
                 referencedColumnName: id
         referralHash:
-            targetEntity: Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface
+            targetEntity: Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface
             inversedBy: referralLines
             joinColumn:
                 name: referralhash_id
                 referencedColumnName: id
                 nullable: false
         referralRule:
-            targetEntity: Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralRuleInterface
+            targetEntity: Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface
             inversedBy: referralLines
             joinColumn:
                 name: referralrule_id

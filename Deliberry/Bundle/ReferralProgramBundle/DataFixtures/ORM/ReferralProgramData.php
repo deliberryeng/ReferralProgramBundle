@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Bundle\ReferralProgramBundle\DataFixtures\ORM;
+namespace Deliberry\Bundle\ReferralProgramBundle\DataFixtures\ORM;
 
 use DateTime;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -23,8 +23,8 @@ use Doctrine\Common\Persistence\ObjectManager;
 
 use Elcodi\Bundle\CoreBundle\DataFixtures\ORM\Abstracts\AbstractFixture;
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
-use Elcodi\Component\ReferralProgram\ElcodiReferralProgramRuleTypes;
-use Elcodi\Component\ReferralProgram\Factory\ReferralRuleFactory;
+use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramRuleTypes;
+use Deliberry\Bundle\ReferralProgram\Factory\ReferralRuleFactory;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

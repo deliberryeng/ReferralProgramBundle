@@ -15,10 +15,10 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Bundle\ReferralProgramBundle\Tests\Functional\Controller;
+namespace Deliberry\Bundle\ReferralProgramBundle\Tests\Functional\Controller;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
-use Elcodi\Component\ReferralProgram\ElcodiReferralProgramCookie;
+use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramCookie;
 
 /**
  * Class ReferralProgramControllerTest

@@ -15,13 +15,13 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Factory;
+namespace Deliberry\Bundle\ReferralProgram\Factory;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Elcodi\Component\ReferralProgram\Entity\ReferralRule;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralRule;
 
 /**
  * Class ReferralRuleFactory

@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Router;
+namespace Deliberry\Bundle\ReferralProgram\Router;
 
 use RuntimeException;
 use Symfony\Component\Config\Loader\LoaderInterface;

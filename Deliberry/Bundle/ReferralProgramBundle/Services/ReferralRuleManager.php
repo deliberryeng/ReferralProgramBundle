@@ -15,12 +15,12 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Services;
+namespace Deliberry\Bundle\ReferralProgram\Services;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Elcodi\Component\ReferralProgram\Repository\ReferralRuleRepository;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\Bundle\ReferralProgram\Repository\ReferralRuleRepository;
 
 /**
  * Class ReferralRuleManager

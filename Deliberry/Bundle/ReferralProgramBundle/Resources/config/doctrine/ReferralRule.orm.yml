@@ -1,6 +1,6 @@
-Elcodi\Component\ReferralProgram\Entity\ReferralRule:
+Deliberry\Bundle\ReferralProgram\Entity\ReferralRule:
     type: entity
-    repositoryClass: Elcodi\Component\ReferralProgram\Repository\ReferralRuleRepository
+    repositoryClass: Deliberry\Bundle\ReferralProgram\Repository\ReferralRuleRepository
     table: referral_rule
     id:
         id:
@@ -46,5 +46,5 @@ Elcodi\Component\ReferralProgram\Entity\ReferralRule:
 
     oneToMany:
         referralLines:
-            targetEntity: Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralLineInterface
+            targetEntity: Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface
             mappedBy: referralRule

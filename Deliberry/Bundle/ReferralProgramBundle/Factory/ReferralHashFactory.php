@@ -15,13 +15,13 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Factory;
+namespace Deliberry\Bundle\ReferralProgram\Factory;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
-use Elcodi\Component\ReferralProgram\Entity\ReferralHash;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
 
 /**
  * Class ReferralHashFactory

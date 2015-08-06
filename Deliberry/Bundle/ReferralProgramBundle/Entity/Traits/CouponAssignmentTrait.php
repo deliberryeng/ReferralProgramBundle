@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Entity\Traits;
+namespace Deliberry\Bundle\ReferralProgram\Entity\Traits;
 
 /**
  * Class CouponAssignmentTrait

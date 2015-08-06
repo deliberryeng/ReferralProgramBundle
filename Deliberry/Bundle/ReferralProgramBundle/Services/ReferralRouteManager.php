@@ -15,11 +15,11 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Services;
+namespace Deliberry\Bundle\ReferralProgram\Services;
 
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
 
 /**
  * Class ReferralRouteManager

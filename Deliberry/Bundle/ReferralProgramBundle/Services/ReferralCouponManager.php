@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Services;
+namespace Deliberry\Bundle\ReferralProgram\Services;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -24,10 +24,10 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Elcodi\Component\Coupon\Entity\Coupon;
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
 use Elcodi\Component\Coupon\Services\CouponManager;
-use Elcodi\Component\ReferralProgram\ElcodiReferralProgramEvents;
-use Elcodi\Component\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
-use Elcodi\Component\ReferralProgram\Event\ReferralProgramCouponAssignedEvent;
-use Elcodi\Component\ReferralProgram\Repository\ReferralLineRepository;
+use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramEvents;
+use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\Bundle\ReferralProgram\Event\ReferralProgramCouponAssignedEvent;
+use Deliberry\Bundle\ReferralProgram\Repository\ReferralLineRepository;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

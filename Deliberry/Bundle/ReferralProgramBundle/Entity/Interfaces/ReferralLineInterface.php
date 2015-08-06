@@ -15,13 +15,13 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Entity\Interfaces;
+namespace Deliberry\Bundle\ReferralProgram\Entity\Interfaces;
 
 use Elcodi\Component\Core\Entity\Interfaces\DateTimeInterface;
 use Elcodi\Component\Core\Entity\Interfaces\EnabledInterface;
 use Elcodi\Component\Core\Entity\Interfaces\IdentifiableInterface;
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
-use Elcodi\Component\ReferralProgram\Entity\ReferralHash;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

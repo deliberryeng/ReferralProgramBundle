@@ -15,13 +15,13 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Component\ReferralProgram\Repository;
+namespace Deliberry\Bundle\ReferralProgram\Repository;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
-use Elcodi\Component\ReferralProgram\Entity\ReferralHash;
-use Elcodi\Component\ReferralProgram\Entity\ReferralLine;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
+use Deliberry\Bundle\ReferralProgram\Entity\ReferralLine;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**
