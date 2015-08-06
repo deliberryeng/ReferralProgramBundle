@@ -20,7 +20,7 @@ namespace ReferralProgram\Event;
 use Symfony\Component\EventDispatcher\Event;
 
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralLineInterface;
 
 /**
  * Class ReferralProgramCouponAssignedEvent

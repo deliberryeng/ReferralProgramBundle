@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\DependencyInjection;
+namespace Deliberry\ReferralProgramBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -132,9 +132,9 @@ class ElcodiReferralProgramExtension extends AbstractExtension implements Entiti
     public function getEntitiesOverrides()
     {
         return [
-            'Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface' => 'elcodi.core.referral_program.entity.referral_hash.class',
-            'Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface' => 'elcodi.core.referral_program.entity.referral_line.class',
-            'Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface' => 'elcodi.core.referral_program.entity.referral_rule.class',
+            'Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface' => 'elcodi.core.referral_program.entity.referral_hash.class',
+            'Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralLineInterface' => 'elcodi.core.referral_program.entity.referral_line.class',
+            'Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface' => 'elcodi.core.referral_program.entity.referral_rule.class',
         ];
     }
 

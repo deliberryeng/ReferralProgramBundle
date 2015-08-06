@@ -20,8 +20,8 @@ namespace ReferralProgram\Repository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralLine;
+use Deliberry\ReferralProgramBundle\Entity\ReferralHash;
+use Deliberry\ReferralProgramBundle\Entity\ReferralLine;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

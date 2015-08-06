@@ -19,8 +19,8 @@ namespace ReferralProgram\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralLine;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\ReferralProgramBundle\Entity\ReferralLine;
 
 /**
  *

@@ -3,38 +3,38 @@ parameters:
     #
     # Entities
     #
-    elcodi.core.referral_program.entity.invitation.class: Deliberry\Bundle\ReferralProgram\Entity\Invitation
-    elcodi.core.referral_program.entity.invitation_bag.class: Deliberry\Bundle\ReferralProgram\Entity\InvitationBag
+    elcodi.core.referral_program.entity.invitation.class: Deliberry\ReferralProgramBundle\Entity\Invitation
+    elcodi.core.referral_program.entity.invitation_bag.class: Deliberry\ReferralProgramBundle\Entity\InvitationBag
 
     #
     # Factories
     #
-    elcodi.factory.referral_rule.class: Deliberry\Bundle\ReferralProgram\Factory\ReferralRuleFactory
-    elcodi.factory.referral_line.class: Deliberry\Bundle\ReferralProgram\Factory\ReferralLineFactory
-    elcodi.factory.referral_hash.class: Deliberry\Bundle\ReferralProgram\Factory\ReferralHashFactory
-    elcodi.factory.referral_invitation.class: Deliberry\Bundle\ReferralProgram\Factory\InvitationFactory
-    elcodi.factory.referral_invitation_bag.class: Deliberry\Bundle\ReferralProgram\Factory\InvitationBagFactory
+    elcodi.factory.referral_rule.class: Deliberry\ReferralProgramBundle\Factory\ReferralRuleFactory
+    elcodi.factory.referral_line.class: Deliberry\ReferralProgramBundle\Factory\ReferralLineFactory
+    elcodi.factory.referral_hash.class: Deliberry\ReferralProgramBundle\Factory\ReferralHashFactory
+    elcodi.factory.referral_invitation.class: Deliberry\ReferralProgramBundle\Factory\InvitationFactory
+    elcodi.factory.referral_invitation_bag.class: Deliberry\ReferralProgramBundle\Factory\InvitationBagFactory
 
     #
     # Services
     #
-    elcodi.manager.referral_program.class: Deliberry\Bundle\ReferralProgram\Services\ReferralProgramManager
-    elcodi.manager.referral_hash.class: Deliberry\Bundle\ReferralProgram\Services\ReferralHashManager
-    elcodi.manager.referral_route.class: Deliberry\Bundle\ReferralProgram\Services\ReferralRouteManager
-    elcodi.manager.referral_coupon.class: Deliberry\Bundle\ReferralProgram\Services\ReferralCouponManager
-    elcodi.manager.referral_rule.class: Deliberry\Bundle\ReferralProgram\Services\ReferralRuleManager
+    elcodi.manager.referral_program.class: Deliberry\ReferralProgramBundle\Services\ReferralProgramManager
+    elcodi.manager.referral_hash.class: Deliberry\ReferralProgramBundle\Services\ReferralHashManager
+    elcodi.manager.referral_route.class: Deliberry\ReferralProgramBundle\Services\ReferralRouteManager
+    elcodi.manager.referral_coupon.class: Deliberry\ReferralProgramBundle\Services\ReferralCouponManager
+    elcodi.manager.referral_rule.class: Deliberry\ReferralProgramBundle\Services\ReferralRuleManager
 
     #
     # Routes
     #
-    elcodi.core.referral_program.routes.loader.class: Deliberry\Bundle\ReferralProgram\Router\ReferralProgramRoutesLoader
+    elcodi.core.referral_program.routes.loader.class: Deliberry\ReferralProgramBundle\Router\ReferralProgramRoutesLoader
 
     #
     # EventListeners
     #
-    elcodi.core.referral_program.event_listener.referral_program_event_listener.class: Deliberry\Bundle\ReferralProgram\EventListener\ReferralProgramEventListener
+    elcodi.core.referral_program.event_listener.referral_program_event_listener.class: Deliberry\ReferralProgramBundle\EventListener\ReferralProgramEventListener
 
     #
     # Controllers
     #
-    elcodi.controller.referral_program.class: Deliberry\Bundle\ReferralProgram\Controller\ReferralProgramController
+    elcodi.controller.referral_program.class: Deliberry\ReferralProgramBundle\Controller\ReferralProgramController

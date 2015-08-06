@@ -19,8 +19,8 @@ namespace ReferralProgram\Entity;
 
 use Doctrine\Common\Collections\Collection;
 
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\InvitationBagInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\InvitationInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\InvitationBagInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\InvitationInterface;
 
 /**
  * Class InvitationsBag

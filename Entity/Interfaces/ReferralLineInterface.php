@@ -21,7 +21,7 @@ use Elcodi\Component\Core\Entity\Interfaces\DateTimeInterface;
 use Elcodi\Component\Core\Entity\Interfaces\EnabledInterface;
 use Elcodi\Component\Core\Entity\Interfaces\IdentifiableInterface;
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
+use Deliberry\ReferralProgramBundle\Entity\ReferralHash;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

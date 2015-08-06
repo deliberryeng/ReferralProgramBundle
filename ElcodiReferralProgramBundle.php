@@ -15,14 +15,14 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle;
+namespace Deliberry\ReferralProgramBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-use Deliberry\Bundle\ReferralProgramBundle\CompilerPass\MappingCompilerPass;
-use Deliberry\Bundle\ReferralProgramBundle\DependencyInjection\ElcodiReferralProgramExtension;
+use Deliberry\ReferralProgramBundle\CompilerPass\MappingCompilerPass;
+use Deliberry\ReferralProgramBundle\DependencyInjection\ElcodiReferralProgramExtension;
 
 /**
  * ReferralProgram Bundle

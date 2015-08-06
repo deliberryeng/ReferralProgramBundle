@@ -20,8 +20,8 @@ namespace ReferralProgram\Factory;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralRule;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\ReferralProgramBundle\Entity\ReferralRule;
 
 /**
  * Class ReferralRuleFactory

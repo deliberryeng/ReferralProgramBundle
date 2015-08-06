@@ -22,8 +22,8 @@ use Doctrine\Common\Collections\Collection;
 use Elcodi\Component\Core\Entity\Traits\EnabledTrait;
 use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
 use Elcodi\Component\Core\Entity\Traits\ValidIntervalTrait;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Traits\CouponAssignmentTrait;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\ReferralProgramBundle\Entity\Traits\CouponAssignmentTrait;
 
 /**
  * ReferralRule entity

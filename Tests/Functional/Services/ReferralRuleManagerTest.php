@@ -15,12 +15,12 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\Tests\Functional\Services;
+namespace Deliberry\ReferralProgramBundle\Tests\Functional\Services;
 
 use Doctrine\Common\Collections\Collection;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface;
 
 /**
  * Class ReferralRuleManagerTest

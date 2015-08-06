@@ -21,7 +21,7 @@ use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralRule;
+use Deliberry\ReferralProgramBundle\Entity\ReferralRule;
 
 /**
  * ReferralRuleRepository

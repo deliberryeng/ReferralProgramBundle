@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\Tests\Functional\app;
+namespace Deliberry\ReferralProgramBundle\Tests\Functional\app;
 
 /**
  * Class FakeController

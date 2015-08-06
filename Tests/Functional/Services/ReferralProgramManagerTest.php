@@ -15,19 +15,19 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\Tests\Functional\Services;
+namespace Deliberry\ReferralProgramBundle\Tests\Functional\Services;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Persistence\ObjectManager;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramRuleTypes;
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramSources;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Invitation;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralLine;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralRule;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramRuleTypes;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramSources;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\ReferralProgramBundle\Entity\Invitation;
+use Deliberry\ReferralProgramBundle\Entity\ReferralHash;
+use Deliberry\ReferralProgramBundle\Entity\ReferralLine;
+use Deliberry\ReferralProgramBundle\Entity\ReferralRule;
 
 /**
  * Class ReferralProgramManagerTest
@@ -142,7 +142,7 @@ class ReferralProgramManagerTest extends WebTestCase
 
         $this->assertCount(5, $referralLines);
         foreach ($referralLines as $referralLine) {
-            $this->assertInstanceOf('Deliberry\Bundle\ReferralProgram\Entity\ReferralLine', $referralLine);
+            $this->assertInstanceOf('Deliberry\ReferralProgramBundle\Entity\ReferralLine', $referralLine);
             $this->assertNull($referralLine->getInvited());
             $this->assertEquals($referralLine->getSource(), ElcodiReferralProgramSources::EMAIL);
             $this->assertEquals($referralLine->getReferralRule()->getId(), $referralRule->getId());
@@ -165,7 +165,7 @@ class ReferralProgramManagerTest extends WebTestCase
      * History: An email is invited using referralprogram engine.
      * No ReferralRule is enabled
      *
-     * @expectedException \Deliberry\Bundle\ReferralProgram\Exceptions\ReferralProgramRuleNotFoundException
+     * @expectedException \Deliberry\ReferralProgramBundle\Exceptions\ReferralProgramRuleNotFoundException
      */
     public function testInviteNoReferralHashEnabled()
     {

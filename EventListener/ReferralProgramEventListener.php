@@ -23,9 +23,9 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 use Elcodi\Component\Cart\Event\OrderOnCreatedEvent;
 use Elcodi\Component\CartCoupon\Services\OrderCouponManager;
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramCookie;
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramRuleTypes;
-use Deliberry\Bundle\ReferralProgram\Services\ReferralCouponManager;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramCookie;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramRuleTypes;
+use Deliberry\ReferralProgramBundle\Services\ReferralCouponManager;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 use Elcodi\Component\User\Event\CustomerRegisterEvent;
 

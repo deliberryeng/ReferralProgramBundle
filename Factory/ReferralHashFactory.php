@@ -20,8 +20,8 @@ namespace ReferralProgram\Factory;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\ReferralProgramBundle\Entity\ReferralHash;
 
 /**
  * Class ReferralHashFactory

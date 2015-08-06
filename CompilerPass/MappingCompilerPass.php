@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\CompilerPass;
+namespace Deliberry\ReferralProgramBundle\CompilerPass;
 
 use Mmoreram\SimpleDoctrineMapping\CompilerPass\Abstracts\AbstractMappingCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

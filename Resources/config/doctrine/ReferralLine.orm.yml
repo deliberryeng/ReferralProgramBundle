@@ -1,6 +1,6 @@
-Deliberry\Bundle\ReferralProgram\Entity\ReferralLine:
+Deliberry\ReferralProgramBundle\Entity\ReferralLine:
     type: entity
-    repositoryClass: Deliberry\Bundle\ReferralProgram\Repository\ReferralLineRepository
+    repositoryClass: Deliberry\ReferralProgramBundle\Repository\ReferralLineRepository
     table: referral_line
     id:
         id:
@@ -66,14 +66,14 @@ Deliberry\Bundle\ReferralProgram\Entity\ReferralLine:
                 name: invited_id
                 referencedColumnName: id
         referralHash:
-            targetEntity: Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface
+            targetEntity: Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface
             inversedBy: referralLines
             joinColumn:
                 name: referralhash_id
                 referencedColumnName: id
                 nullable: false
         referralRule:
-            targetEntity: Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface
+            targetEntity: Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface
             inversedBy: referralLines
             joinColumn:
                 name: referralrule_id

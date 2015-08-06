@@ -18,7 +18,7 @@
 namespace ReferralProgram\Factory;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Deliberry\Bundle\ReferralProgram\Entity\Invitation;
+use Deliberry\ReferralProgramBundle\Entity\Invitation;
 
 /**
  * Class InvitationFactory

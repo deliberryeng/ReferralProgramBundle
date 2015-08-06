@@ -24,10 +24,10 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Elcodi\Component\Coupon\Entity\Coupon;
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
 use Elcodi\Component\Coupon\Services\CouponManager;
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramEvents;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
-use Deliberry\Bundle\ReferralProgram\Event\ReferralProgramCouponAssignedEvent;
-use Deliberry\Bundle\ReferralProgram\Repository\ReferralLineRepository;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramEvents;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\ReferralProgramBundle\Event\ReferralProgramCouponAssignedEvent;
+use Deliberry\ReferralProgramBundle\Repository\ReferralLineRepository;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

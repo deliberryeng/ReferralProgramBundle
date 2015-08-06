@@ -17,7 +17,7 @@
 
 namespace ReferralProgram\Exceptions;
 
-use Deliberry\Bundle\ReferralProgram\Exceptions\Abstracts\AbstractReferralProgramException;
+use Deliberry\ReferralProgramBundle\Exceptions\Abstracts\AbstractReferralProgramException;
 
 /**
  * Class ReferralProgramEmailIsUserException

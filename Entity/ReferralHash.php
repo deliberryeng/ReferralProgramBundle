@@ -20,7 +20,7 @@ namespace ReferralProgram\Entity;
 use Doctrine\Common\Collections\Collection;
 
 use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

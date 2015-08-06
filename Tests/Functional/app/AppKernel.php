@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\Tests\Functional\app;
+namespace Deliberry\ReferralProgramBundle\Tests\Functional\app;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\Abstracts\AbstractElcodiKernel;
 
@@ -68,7 +68,7 @@ class AppKernel extends AbstractElcodiKernel
             new \Elcodi\Bundle\AttributeBundle\ElcodiAttributeBundle(),
             new \Elcodi\Bundle\ProductBundle\ElcodiProductBundle(),
             new \Elcodi\Bundle\RuleBundle\ElcodiRuleBundle(),
-            new \Deliberry\Bundle\ReferralProgramBundle\ElcodiReferralProgramBundle(),
+            new \Deliberry\ReferralProgramBundle\ElcodiReferralProgramBundle(),
             new \Elcodi\Bundle\StateTransitionMachineBundle\ElcodiStateTransitionMachineBundle(),
             new \Elcodi\Bundle\ConfigurationBundle\ElcodiConfigurationBundle(),
             new \Elcodi\Bundle\ShippingBundle\ElcodiShippingBundle(),

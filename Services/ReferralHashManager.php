@@ -20,10 +20,10 @@ namespace ReferralProgram\Services;
 use Doctrine\Common\Persistence\ObjectManager;
 
 use Elcodi\Component\Core\Generator\Interfaces\GeneratorInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
-use Deliberry\Bundle\ReferralProgram\Factory\ReferralHashFactory;
-use Deliberry\Bundle\ReferralProgram\Repository\ReferralHashRepository;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\ReferralProgramBundle\Entity\ReferralHash;
+use Deliberry\ReferralProgramBundle\Factory\ReferralHashFactory;
+use Deliberry\ReferralProgramBundle\Repository\ReferralHashRepository;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 
 /**

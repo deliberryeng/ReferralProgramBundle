@@ -15,17 +15,17 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\Tests\Functional\Services;
+namespace Deliberry\ReferralProgramBundle\Tests\Functional\Services;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramRuleTypes;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Invitation;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramRuleTypes;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\ReferralProgramBundle\Entity\Invitation;
 use Elcodi\Component\User\Entity\Customer;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 

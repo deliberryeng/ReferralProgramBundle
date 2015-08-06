@@ -19,8 +19,8 @@ namespace ReferralProgram\Services;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Deliberry\Bundle\ReferralProgram\Repository\ReferralRuleRepository;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\ReferralProgramBundle\Repository\ReferralRuleRepository;
 
 /**
  * Class ReferralRuleManager

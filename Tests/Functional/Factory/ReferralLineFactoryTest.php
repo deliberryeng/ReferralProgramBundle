@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\Tests\Functional\Factory;
+namespace Deliberry\ReferralProgramBundle\Tests\Functional\Factory;
 
 use Elcodi\Bundle\TestCommonBundle\Functional\WebTestCase;
 

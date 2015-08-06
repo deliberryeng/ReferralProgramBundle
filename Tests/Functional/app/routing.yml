@@ -4,4 +4,4 @@ core_referralprogram_bundle:
 fake_route:
     path: ""
     defaults:
-        _controller: Deliberry\Bundle\ReferralProgramBundle\Tests\Functional\app\FakeController:FakeAction
+        _controller: Deliberry\ReferralProgramBundle\Tests\Functional\app\FakeController:FakeAction

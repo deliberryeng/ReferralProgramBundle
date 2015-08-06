@@ -22,25 +22,25 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramEvents;
-use Deliberry\Bundle\ReferralProgram\ElcodiReferralProgramSources;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\InvitationBagInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\InvitationInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralRuleInterface;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralHash;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralLine;
-use Deliberry\Bundle\ReferralProgram\Entity\ReferralRule;
-use Deliberry\Bundle\ReferralProgram\Event\ReferralProgramInvitationEvent;
-use Deliberry\Bundle\ReferralProgram\Exceptions\ReferralProgramEmailIsUserException;
-use Deliberry\Bundle\ReferralProgram\Exceptions\ReferralProgramLineExistsException;
-use Deliberry\Bundle\ReferralProgram\Exceptions\ReferralProgramRuleNotFoundException;
-use Deliberry\Bundle\ReferralProgram\Factory\InvitationBagFactory;
-use Deliberry\Bundle\ReferralProgram\Factory\InvitationFactory;
-use Deliberry\Bundle\ReferralProgram\Factory\ReferralLineFactory;
-use Deliberry\Bundle\ReferralProgram\Repository\ReferralLineRepository;
-use Deliberry\Bundle\ReferralProgram\Repository\ReferralRuleRepository;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramEvents;
+use Deliberry\ReferralProgramBundle\ElcodiReferralProgramSources;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\InvitationBagInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\InvitationInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralLineInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralRuleInterface;
+use Deliberry\ReferralProgramBundle\Entity\ReferralHash;
+use Deliberry\ReferralProgramBundle\Entity\ReferralLine;
+use Deliberry\ReferralProgramBundle\Entity\ReferralRule;
+use Deliberry\ReferralProgramBundle\Event\ReferralProgramInvitationEvent;
+use Deliberry\ReferralProgramBundle\Exceptions\ReferralProgramEmailIsUserException;
+use Deliberry\ReferralProgramBundle\Exceptions\ReferralProgramLineExistsException;
+use Deliberry\ReferralProgramBundle\Exceptions\ReferralProgramRuleNotFoundException;
+use Deliberry\ReferralProgramBundle\Factory\InvitationBagFactory;
+use Deliberry\ReferralProgramBundle\Factory\InvitationFactory;
+use Deliberry\ReferralProgramBundle\Factory\ReferralLineFactory;
+use Deliberry\ReferralProgramBundle\Repository\ReferralLineRepository;
+use Deliberry\ReferralProgramBundle\Repository\ReferralRuleRepository;
 use Elcodi\Component\User\Entity\Customer;
 use Elcodi\Component\User\Entity\Interfaces\CustomerInterface;
 use Elcodi\Component\User\Repository\CustomerRepository;
@@ -120,7 +120,7 @@ class ReferralProgramManager
      */
     protected $purgeDisabledLines;
     /**
-     * @var \Deliberry\Bundle\ReferralProgram\Factory\InvitationFactory
+     * @var \Deliberry\ReferralProgramBundle\Factory\InvitationFactory
      *
      * invitationFactory
      */

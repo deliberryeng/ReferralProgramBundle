@@ -20,7 +20,7 @@ namespace ReferralProgram\Factory;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
-use Deliberry\Bundle\ReferralProgram\Entity\InvitationBag;
+use Deliberry\ReferralProgramBundle\Entity\InvitationBag;
 
 /**
  * Class InvitationBagFactory

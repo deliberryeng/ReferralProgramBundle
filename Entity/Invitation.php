@@ -17,7 +17,7 @@
 
 namespace ReferralProgram\Entity;
 
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\InvitationInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\InvitationInterface;
 
 /**
  * Class Invitation

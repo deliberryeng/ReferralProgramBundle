@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgramBundle\DependencyInjection;
+namespace Deliberry\ReferralProgramBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 
@@ -38,21 +38,21 @@ class Configuration extends AbstractConfiguration
                     ->children()
                         ->append($this->addMappingNode(
                             'referral_hash',
-                            'Deliberry\Bundle\ReferralProgram\Entity\ReferralHash',
-                            '@ElcodiReferralProgramBundle/Resources/config/doctrine/ReferralHash.orm.yml',
+                            'Deliberry\ReferralProgramBundle\Entity\ReferralHash',
+                            '@DeliberryReferralProgramBundle/Resources/config/doctrine/ReferralHash.orm.yml',
                             'default',
                             true
                         ))
                         ->append($this->addMappingNode(
                             'referral_line',
-                            'Deliberry\Bundle\ReferralProgram\Entity\ReferralLine',
+                            'Deliberry\ReferralProgramBundle\Entity\ReferralLine',
                             '@ElcodiReferralProgramBundle/Resources/config/doctrine/ReferralLine.orm.yml',
                             'default',
                             true
                         ))
                         ->append($this->addMappingNode(
                             'referral_rule',
-                            'Deliberry\Bundle\ReferralProgram\Entity\ReferralRule',
+                            'Deliberry\ReferralProgramBundle\Entity\ReferralRule',
                             '@ElcodiReferralProgramBundle/Resources/config/doctrine/ReferralRule.orm.yml',
                             'default',
                             true

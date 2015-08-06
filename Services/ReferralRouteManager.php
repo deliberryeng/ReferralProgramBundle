@@ -19,7 +19,7 @@ namespace ReferralProgram\Services;
 
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-use Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralHashInterface;
+use Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralHashInterface;
 
 /**
  * Class ReferralRouteManager

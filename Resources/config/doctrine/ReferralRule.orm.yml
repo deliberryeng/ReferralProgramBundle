@@ -1,6 +1,6 @@
-Deliberry\Bundle\ReferralProgram\Entity\ReferralRule:
+Deliberry\ReferralProgramBundle\Entity\ReferralRule:
     type: entity
-    repositoryClass: Deliberry\Bundle\ReferralProgram\Repository\ReferralRuleRepository
+    repositoryClass: Deliberry\ReferralProgramBundle\Repository\ReferralRuleRepository
     table: referral_rule
     id:
         id:
@@ -46,5 +46,5 @@ Deliberry\Bundle\ReferralProgram\Entity\ReferralRule:
 
     oneToMany:
         referralLines:
-            targetEntity: Deliberry\Bundle\ReferralProgram\Entity\Interfaces\ReferralLineInterface
+            targetEntity: Deliberry\ReferralProgramBundle\Entity\Interfaces\ReferralLineInterface
             mappedBy: referralRule
