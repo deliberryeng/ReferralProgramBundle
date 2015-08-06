@@ -88,7 +88,7 @@ class ReferralProgramEventListener
         $hash = $this->getReferralProgramCookieHash();
 
         if (!empty($hash)) {
-            $customer = $event->getCustomer();
+            $customer = $event->getUser();
             $this
                 ->referralCouponManager
                 ->checkCouponAssignment(
