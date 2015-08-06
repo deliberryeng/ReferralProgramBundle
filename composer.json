@@ -52,7 +52,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Elcodi\\Bundle\\ReferralProgramBundle\\": ""
+            "ReferralProgramBundle\\": ""
         }
     },
     "extra": {
