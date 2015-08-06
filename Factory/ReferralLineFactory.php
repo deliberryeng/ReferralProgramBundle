@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\Factory;
+namespace Deliberry\ReferralProgramBundle\Factory;
 
 use DateTime;
 

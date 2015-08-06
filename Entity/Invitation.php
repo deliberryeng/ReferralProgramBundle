@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\Entity;
+namespace Deliberry\ReferralProgramBundle\Entity;
 
 use Deliberry\ReferralProgramBundle\Entity\Interfaces\InvitationInterface;
 

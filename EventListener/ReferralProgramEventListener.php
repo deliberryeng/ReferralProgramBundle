@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\EventListener;
+namespace Deliberry\ReferralProgramBundle\EventListener;
 
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Request;

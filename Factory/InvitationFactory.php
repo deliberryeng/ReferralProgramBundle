@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\Factory;
+namespace Deliberry\ReferralProgramBundle\Factory;
 
 use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
 use Deliberry\ReferralProgramBundle\Entity\Invitation;

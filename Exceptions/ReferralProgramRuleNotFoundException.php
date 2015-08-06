@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\Exceptions;
+namespace Deliberry\ReferralProgramBundle\Exceptions;
 
 use Deliberry\ReferralProgramBundle\Exceptions\Abstracts\AbstractReferralProgramException;
 

@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\Event;
+namespace Deliberry\ReferralProgramBundle\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

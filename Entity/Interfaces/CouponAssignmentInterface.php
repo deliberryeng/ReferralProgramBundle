@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\Entity\Interfaces;
+namespace Deliberry\ReferralProgramBundle\Entity\Interfaces;
 
 use Elcodi\Component\Coupon\Entity\Interfaces\CouponInterface;
 

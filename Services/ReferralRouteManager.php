@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram\Services;
+namespace Deliberry\ReferralProgramBundle\Services;
 
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 

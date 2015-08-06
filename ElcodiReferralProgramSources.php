@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace ReferralProgram;
+namespace Deliberry\ReferralProgramBundle;
 
 /**
  * ElcodiReferralProgramSources
