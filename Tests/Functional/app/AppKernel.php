@@ -68,7 +68,7 @@ class AppKernel extends AbstractElcodiKernel
             new \Elcodi\Bundle\AttributeBundle\ElcodiAttributeBundle(),
             new \Elcodi\Bundle\ProductBundle\ElcodiProductBundle(),
             new \Elcodi\Bundle\RuleBundle\ElcodiRuleBundle(),
-            new \Deliberry\ReferralProgramBundle\ElcodiReferralProgramBundle(),
+            new \Deliberry\ReferralProgramBundle\DeliberryReferralProgramBundle(),
             new \Elcodi\Bundle\StateTransitionMachineBundle\ElcodiStateTransitionMachineBundle(),
             new \Elcodi\Bundle\ConfigurationBundle\ElcodiConfigurationBundle(),
             new \Elcodi\Bundle\ShippingBundle\ElcodiShippingBundle(),

@@ -46,14 +46,14 @@ class Configuration extends AbstractConfiguration
                         ->append($this->addMappingNode(
                             'referral_line',
                             'Deliberry\ReferralProgramBundle\Entity\ReferralLine',
-                            '@ElcodiReferralProgramBundle/Resources/config/doctrine/ReferralLine.orm.yml',
+                            '@DeliberryReferralProgramBundle/Resources/config/doctrine/ReferralLine.orm.yml',
                             'default',
                             true
                         ))
                         ->append($this->addMappingNode(
                             'referral_rule',
                             'Deliberry\ReferralProgramBundle\Entity\ReferralRule',
-                            '@ElcodiReferralProgramBundle/Resources/config/doctrine/ReferralRule.orm.yml',
+                            '@DeliberryReferralProgramBundle/Resources/config/doctrine/ReferralRule.orm.yml',
                             'default',
                             true
                         ))

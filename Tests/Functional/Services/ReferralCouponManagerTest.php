@@ -65,7 +65,7 @@ class ReferralCouponManagerTest extends WebTestCase
     {
         return array(
             'ElcodiUserBundle',
-            'ElcodiReferralProgramBundle',
+            'DeliberryReferralProgramBundle',
         );
     }
 

@@ -61,7 +61,7 @@ class ReferralRuleManagerTest extends WebTestCase
             'ElcodiUserBundle',
             'ElcodiCurrencyBundle',
             'ElcodiCouponBundle',
-            'ElcodiReferralProgramBundle',
+            'DeliberryReferralProgramBundle',
         );
     }
 

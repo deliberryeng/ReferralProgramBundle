@@ -60,7 +60,7 @@ class ReferralHashManagerTest extends WebTestCase
             'ElcodiUserBundle',
             'ElcodiCurrencyBundle',
             'ElcodiCouponBundle',
-            'ElcodiReferralProgramBundle',
+            'DeliberryReferralProgramBundle',
         );
     }
 
