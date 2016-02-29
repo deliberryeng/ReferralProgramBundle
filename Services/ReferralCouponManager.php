@@ -115,19 +115,36 @@ class ReferralCouponManager
     public function checkCouponAssignment(CustomerInterface $customer, $hash, $type)
     {
         $referralLine = $this->referralProgramManager->resolve($customer, $hash);
-
         /**
          * Current hash is not a generated hash or referralProgram is not activated
          */
         if (!($referralLine instanceof ReferralLineInterface)) {
             return $this;
         }
-
         $this
             ->checkReferrerCouponAssignment($referralLine, $type)
             ->checkInvitedCouponAssignment($referralLine, $type);
 
         return $this;
+    }
+
+    public function updateReferrerAfterUseCoupon(CouponInterface $coupon)
+    {
+        $invitedCoupon = $this->referralLineRepository->findOneBy(['invitedAssignedCoupon' => $coupon->getId()]);
+        $referrerCoupon = $this->referralLineRepository->findOneBy(['referrerAssignedCoupon' => $coupon->getId()]);
+
+        if (($invitedCoupon != null and sizeof($invitedCoupon)) OR ($referrerCoupon != null and sizeof($referrerCoupon))) {
+            if ($invitedCoupon != null) {
+                $invitedCoupon->setInvitedCouponUsed(true);
+                $this->manager->persist($invitedCoupon);
+                $this->manager->flush();
+            }
+            if ($referrerCoupon != null) {
+                $referrerCoupon->setReferrerCouponUsed(true);
+                $this->manager->persist($referrerCoupon);
+                $this->manager->flush();
+            }
+        }
     }
 
     /**
@@ -184,7 +201,7 @@ class ReferralCouponManager
         /**
          * New coupon MUST be assigned to referrer.
          */
-        if ($couponReferrer instanceof CouponInterface) {
+        if ($couponReferrer instanceof CouponInterface and !$referralLine->getReferrerCouponUsed() and !$referralLine->getInvitedCouponUsed()) {
             $newCoupon = $this->couponManager->duplicateCoupon($couponReferrer);
 
             /**
@@ -202,6 +219,7 @@ class ReferralCouponManager
              * Coupon assigned to referrer event is raised
              */
             $event = new ReferralProgramCouponAssignedEvent($referralLine, $newCoupon);
+
             $this->eventDispatcher->dispatch(ElcodiReferralProgramEvents::REFERRAL_PROGRAM_COUPON_ASSIGNED_TO_REFERRER, $event);
 
             $this->raiseCommonCouponAssignedEvent($referralLine, $newCoupon);
@@ -240,7 +258,7 @@ class ReferralCouponManager
         /**
          * New coupon MUST be assigned to invited.
          */
-        if ($couponInvited instanceof CouponInterface) {
+        if ($couponInvited instanceof CouponInterface and !$referralLine->getInvitedCouponUsed()) {
             $newCoupon = $this->couponManager->duplicateCoupon($couponInvited);
 
             /**
@@ -256,10 +274,12 @@ class ReferralCouponManager
             $this->manager->flush($newCoupon);
             $this->manager->flush($referralLine);
 
+
             /**
              * Coupon assigned to invited event is raised
              */
             $event = new ReferralProgramCouponAssignedEvent($referralLine, $newCoupon);
+
             $this->eventDispatcher->dispatch(ElcodiReferralProgramEvents::REFERRAL_PROGRAM_COUPON_ASSIGNED_TO_INVITED, $event);
 
             $this->raiseCommonCouponAssignedEvent($referralLine, $newCoupon);
@@ -280,7 +300,6 @@ class ReferralCouponManager
     {
         $event = new ReferralProgramCouponAssignedEvent($referralLine, $coupon);
         $this->eventDispatcher->dispatch(ElcodiReferralProgramEvents::REFERRAL_PROGRAM_COUPON_ASSIGNED, $event);
-
         return $this;
     }
 
@@ -358,16 +377,16 @@ class ReferralCouponManager
         }
 
         foreach ($coupons as $coupon) {
-
             /**
              * @var ReferralLineInterface $referralLine
              */
             if ($referralLine->getInvitedAssignedCoupon() == $coupon) {
                 $referralLine->setInvitedCouponUsed(true);
+                $this->manager->persist($referralLine);
+
                 $this->manager->flush($referralLine);
             }
         }
-
         return $this;
     }
 }
