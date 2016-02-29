@@ -325,7 +325,6 @@ class ReferralProgramManager
                 $referralLine = $referralLines->first();
             }
         } else {
-
             /**
              * @var ArrayCollection $referralLines
              */
@@ -340,7 +339,6 @@ class ReferralProgramManager
                 ->referralLineRepository
                 ->findOneByReferralHashAndInvitedEmail($referralHash, $invited->getEmail());
         }
-
         /**
          * @var ArrayCollection $otherReferralLines
          */
@@ -362,7 +360,16 @@ class ReferralProgramManager
         /**
          * ReferralLine is not created, so we create new one with type direct
          */
-        if (!($referralLine instanceof ReferralLineInterface)) {
+
+        $referralLineUsed = $this
+            ->referralLineRepository
+            ->findOneBy(array(
+                'enabled'      => true,
+                'closed'       => true,
+                'invitedEmail' => $invitedEmail,
+            ));
+        if (!($referralLine instanceof ReferralLineInterface) and ($referralLineUsed == null)) {
+
             $referralRule = $this
                 ->referralRuleRepository
                 ->findEnabledReferralRule();
@@ -384,6 +391,7 @@ class ReferralProgramManager
                 ->setInvitedCoupon($referralRule->getInvitedCoupon());
 
             $this->manager->persist($referralLine);
+
         }
 
         $referralLine
