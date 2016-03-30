@@ -287,119 +287,123 @@ class ReferralProgramManager
             ->referralHashManager
             ->getReferralHashByHash($hash);
 
-        if (!($referralHash instanceof ReferralHashInterface)) {
-            $referralLines = new ArrayCollection();
-            $referralLine = $this
-                ->referralLineRepository
-                ->findOneBy(array(
-                    'enabled'      => true,
-                    'closed'       => false,
-                    'invitedEmail' => $invitedEmail,
-                ));
-
-            if (!($referralLine instanceof ReferralLineInterface)) {
-
-                /**
-                 * Only tries to retrieve current Line if
-                 * $autoReferralAssignment is true
-                 */
-                if (!$this->autoReferralAssignment) {
-                    return;
-                }
-
-                $referralLines = $this
+        if ($invitedEmail != $referralHash->getReferrer()->getEmail()) {
+            if (!($referralHash instanceof ReferralHashInterface)) {
+                $referralLines = new ArrayCollection();
+                $referralLine = $this
                     ->referralLineRepository
-                    ->findBy(array(
-                        'closed'       => false,
+                    ->findOneBy(array(
+                        'enabled' => true,
+                        'closed' => false,
                         'invitedEmail' => $invitedEmail,
                     ));
 
+                if (!($referralLine instanceof ReferralLineInterface)) {
+
+                    /**
+                     * Only tries to retrieve current Line if
+                     * $autoReferralAssignment is true
+                     */
+                    if (!$this->autoReferralAssignment) {
+                        return;
+                    }
+
+                    $referralLines = $this
+                        ->referralLineRepository
+                        ->findBy(array(
+                            'closed' => false,
+                            'invitedEmail' => $invitedEmail,
+                        ));
+
+                    /**
+                     * No result is found or more than one. It means than this user
+                     * is not invited and the hash is trying to use is not valid.
+                     */
+                    if (!($referralLines instanceof ArrayCollection) || $referralLines->count() > 1) {
+                        return;
+                    }
+
+                    $referralLine = $referralLines->first();
+                }
+            } else {
                 /**
-                 * No result is found or more than one. It means than this user
-                 * is not invited and the hash is trying to use is not valid.
+                 * @var ArrayCollection $referralLines
                  */
-                if (!($referralLines instanceof ArrayCollection) || $referralLines->count() > 1) {
+                $referralLines = $this
+                    ->referralLineRepository
+                    ->findByInvitedEmail($invitedEmail);
+
+                /**
+                 * @var ReferralLine $referralLine
+                 */
+                $referralLine = $this
+                    ->referralLineRepository
+                    ->findOneByReferralHashAndInvitedEmail($referralHash, $invited->getEmail());
+            }
+            /**
+             * @var ArrayCollection $otherReferralLines
+             */
+            $manager = $this->manager;
+            $purgeDisabledLines = $this->purgeDisabledLines;
+
+            if (!$referralLines->isEmpty()) {
+                $referralLines->removeElement($referralLine);
+                $referralLines->map(function (ReferralLineInterface $otherReferralLine) use ($purgeDisabledLines, $manager) {
+
+                    if ($purgeDisabledLines) {
+                        $manager->remove($otherReferralLine);
+                    } else {
+                        $otherReferralLine->setEnabled(false);
+                    }
+                });
+            }
+
+            /**
+             * ReferralLine is not created, so we create new one with type direct
+             */
+
+            $referralLineUsed = $this
+                ->referralLineRepository
+                ->findOneBy(array(
+                    'enabled' => true,
+                    'closed' => true,
+                    'invitedEmail' => $invitedEmail,
+                ));
+            if (!($referralLine instanceof ReferralLineInterface) and ($referralLineUsed == null)) {
+
+                $referralRule = $this
+                    ->referralRuleRepository
+                    ->findEnabledReferralRule();
+
+                if (!($referralRule instanceof ReferralRuleInterface)) {
                     return;
                 }
 
-                $referralLine = $referralLines->first();
-            }
-        } else {
-            /**
-             * @var ArrayCollection $referralLines
-             */
-            $referralLines = $this
-                ->referralLineRepository
-                ->findByInvitedEmail($invitedEmail);
+                $referralLine = $this->referralLineFactory->create();
+                $referralLine
+                    ->setReferralHash($referralHash)
+                    ->setInvitedEmail($invited->getEmail())
+                    ->setInvitedName($invited->getFullName())
+                    ->setSource(ElcodiReferralProgramSources::DIRECT)
+                    ->setReferralRule($referralRule)
+                    ->setReferrerType($referralRule->getReferrerType())
+                    ->setReferrerCoupon($referralRule->getReferrerCoupon())
+                    ->setInvitedType($referralRule->getInvitedType())
+                    ->setInvitedCoupon($referralRule->getInvitedCoupon());
 
-            /**
-             * @var ReferralLine $referralLine
-             */
-            $referralLine = $this
-                ->referralLineRepository
-                ->findOneByReferralHashAndInvitedEmail($referralHash, $invited->getEmail());
-        }
-        /**
-         * @var ArrayCollection $otherReferralLines
-         */
-        $manager = $this->manager;
-        $purgeDisabledLines = $this->purgeDisabledLines;
+                $this->manager->persist($referralLine);
 
-        if (!$referralLines->isEmpty()) {
-            $referralLines->removeElement($referralLine);
-            $referralLines->map(function (ReferralLineInterface $otherReferralLine) use ($purgeDisabledLines, $manager) {
-
-                if ($purgeDisabledLines) {
-                    $manager->remove($otherReferralLine);
-                } else {
-                    $otherReferralLine->setEnabled(false);
-                }
-            });
-        }
-
-        /**
-         * ReferralLine is not created, so we create new one with type direct
-         */
-
-        $referralLineUsed = $this
-            ->referralLineRepository
-            ->findOneBy(array(
-                'enabled'      => true,
-                'closed'       => true,
-                'invitedEmail' => $invitedEmail,
-            ));
-        if (!($referralLine instanceof ReferralLineInterface) and ($referralLineUsed == null)) {
-
-            $referralRule = $this
-                ->referralRuleRepository
-                ->findEnabledReferralRule();
-
-            if (!($referralRule instanceof ReferralRuleInterface)) {
-                return;
             }
 
-            $referralLine = $this->referralLineFactory->create();
             $referralLine
-                ->setReferralHash($referralHash)
-                ->setInvitedEmail($invited->getEmail())
-                ->setInvitedName($invited->getFullName())
-                ->setSource(ElcodiReferralProgramSources::DIRECT)
-                ->setReferralRule($referralRule)
-                ->setReferrerType($referralRule->getReferrerType())
-                ->setReferrerCoupon($referralRule->getReferrerCoupon())
-                ->setInvitedType($referralRule->getInvitedType())
-                ->setInvitedCoupon($referralRule->getInvitedCoupon());
+                ->setInvited($invited)
+                ->setEnabled(true);
+            $this->manager->flush();
 
-            $this->manager->persist($referralLine);
 
+
+            return $referralLine;
         }
-
-        $referralLine
-            ->setInvited($invited)
-            ->setEnabled(true);
-        $this->manager->flush();
-
-        return $referralLine;
     }
 
     /**
