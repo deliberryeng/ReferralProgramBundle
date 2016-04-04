@@ -197,11 +197,15 @@ class ReferralCouponManager
          * @var Coupon $couponReferrer
          */
         $couponReferrer = $referralLine->getReferrerCoupon();
-
         /**
          * New coupon MUST be assigned to referrer.
          */
-        if ($couponReferrer instanceof CouponInterface and !$referralLine->getReferrerCouponUsed() and !$referralLine->getInvitedCouponUsed()) {
+        if (
+            $couponReferrer instanceof CouponInterface and
+            !$referralLine->getReferrerCouponUsed() and
+            !$referralLine->getInvitedCouponUsed() and
+            $referralLine->getReferrerAssignedCoupon() == null)
+        {
             $newCoupon = $this->couponManager->duplicateCoupon($couponReferrer);
 
             /**
@@ -258,7 +262,10 @@ class ReferralCouponManager
         /**
          * New coupon MUST be assigned to invited.
          */
-        if ($couponInvited instanceof CouponInterface and !$referralLine->getInvitedCouponUsed()) {
+        if ($couponInvited instanceof CouponInterface and
+            !$referralLine->getInvitedCouponUsed() and
+            $referralLine->getInvitedAssignedCoupon() == null)
+        {
             $newCoupon = $this->couponManager->duplicateCoupon($couponInvited);
 
             /**
