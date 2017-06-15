@@ -203,7 +203,7 @@ class ReferralCouponManager
         if (
             $couponReferrer instanceof CouponInterface and
             !$referralLine->getReferrerCouponUsed() and
-            !$referralLine->getInvitedCouponUsed() and
+            $referralLine->getInvitedCouponUsed() and
             $referralLine->getReferrerAssignedCoupon() == null)
         {
             $newCoupon = $this->couponManager->duplicateCoupon($couponReferrer);
